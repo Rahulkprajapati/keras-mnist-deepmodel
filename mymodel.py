@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python
 # coding: utf-8
 
 # In[1]:
@@ -46,7 +46,7 @@ def model_train(epoch,n):
     y_test = keras.utils.to_categorical(y_test, num_classes)
 
     model = Sequential()
-    
+
     model.add(Conv2D(32, kernel_size=(3, 3),
                      activation='relu',
                      input_shape=input_shape))
@@ -81,3 +81,4 @@ f = open("accuracy.txt","w+")
 f.write(str(accuracy_train_model))
 f.close()
 os.system("mv /accuracy.txt /mlops-task")
+
